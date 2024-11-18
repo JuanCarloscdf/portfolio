@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg {
+    color: inherit;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 50px,
+
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 480px) {
+    :root {
+        --header-height: 70px
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: inherit;
+}
+
+li::marker{
+    margin-right: 10px;
+}
+
+.active {
+    color: #ffac33;
+}
+
+html.dark .active {
+    color: #ffac33;
+}
+
+html:not(.dark) .active {
+    color: #e6056a
+}
+
+.nav-link {
+    position: relative;
+    height: 100%;
+    padding: 0 .5rem;
+    color: inherit;
+}
+
+.nav-link::after,
+.nav-link::before {
+    position: absolute;
+    transition: all;
+    transition-duration: 500ms;
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.nav-link::before {
+    top: 0;
+    left: 0;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+.nav-link::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 8px;
+    height: 8px;
+
+}
+
+html.dark .nav-link:hover::before,
+html.dark .nav-link:hover::after {
+    border-color: #ffac33;
+}
+
+html:not(.dark) .nav-link:hover::before,
+html:not(.dark) .nav-link:hover::after {
+    border-color: #e6056a;
+}
+
+button:active {
+    transform: translate(2%);
+}
