@@ -1,6 +1,5 @@
 import { forwardRef, MutableRefObject, useImperativeHandle, useState } from "react";
 import { CodeBlokT } from "../../interfaces/gist";
-import { Link } from "react-router-dom";
 
 
 export type ContentsMethods = {
