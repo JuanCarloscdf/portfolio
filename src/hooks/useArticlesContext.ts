@@ -14,7 +14,7 @@ export function useArticles() {
         return state.articles.find((article) => article.id === id)
     }, [state])
     const getByCat = useCallback((cat: string) => {
-        return state.articles.find((article) => article.category = cat)
+        return state.articles.filter((article) => article.category === cat)
     }, [state])
     const addArticle = useCallback((gist: Gist) => {
         dispatch({ type: "loading" })

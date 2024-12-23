@@ -9,12 +9,20 @@ const HeaderIcons = () => {
 
   return (
     <div className="flex gap-2 items-center justify-center h-full" >
-      <IconLinkedin height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
-      <IconPhone height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
-      <IconGithub height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
-      <IconMail height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
+      <a href="https://www.linkedin.com/in/juancarloscdf" target="_blank" className="h-full">
+        <IconLinkedin height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=59173080372" target="_blank" className="h-full">
+        <IconPhone height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
+      </a>
+      <a href="https://github.com/JuanCarloscdf" target="_blank" className="h-full">
+        <IconGithub height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
+      </a>
+      <a href="mailto:jcmrdev@gmail.com" target="_blank" className="h-full">
+        <IconMail height={"100%"} className="cursor-pointer hover:animate-bell" onClick={() => console.log("asdas")} />
+      </a>
       <ToggleTheme />
-      <ToggleMenu/>
+      <ToggleMenu />
     </div>
   );
 };

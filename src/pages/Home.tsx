@@ -1,17 +1,22 @@
-import { useRef } from "react";
-import HomePresentation from "../components/home/HomeTitle";
-import Section from "../components/share/Section";
-
+import MainContainer from "../components/share/Section";
+import SectionTitle from "../components/share/SectionTitle";
+import { lazy, Suspense } from "react";
+import SkeewedTitle from "../components/tools/SkeewedTitle";
+const MagicWords = lazy(() => import("../components/canvas/MagicWords"))
 
 const Home = () => {
-const homeRef = useRef(0)
-homeRef.current ++
-console.log("Home",homeRef.current)
-  return (
-    <Section>
-      <HomePresentation/>
-    </Section>
 
+  return (
+    <MainContainer>
+      <SectionTitle text="Tools" />
+      <SkeewedTitle />
+      <section className="w-full">
+        <h1 className="text-base font-light mb-3 text-rose dark:text-gold">Push and drag to reveal the message</h1>
+        <Suspense>
+          <MagicWords canvasHeight={500} />
+        </Suspense>
+      </section>
+    </MainContainer>
   );
 };
 

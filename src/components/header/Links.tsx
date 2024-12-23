@@ -8,14 +8,14 @@ console.log("Links",linksRef.current) */
     <nav className={`${isNav ? "grid items-center":"hidden xs:grid items-center" }`}>
         <ul className="flex gap-1">
           <li className="nav-link">
-            <NavLink className={({ isActive }) => `${isActive ? 'active' : ''}`} to='/about'>About</NavLink>
+            <NavLink className={({ isActive }) => `${isActive ? 'text-rose dark:text-gold' : ''}`} to='/about'>About</NavLink>
           </li>
           <li className="nav-link">
-            <NavLink className={({ isActive }) => `${isActive ? 'active' : ''}`} to='/works'>Works</NavLink>
+            <NavLink className={({ isActive }) => `${isActive ? 'text-rose dark:text-gold' : ''}`} to='/works'>Works</NavLink>
 
           </li>
           <li className="nav-link">
-            <NavLink className={({ isActive }) => `${isActive ? 'active' : ''}`} to='/tutorials'>Tutorials</NavLink>
+            <NavLink className={({ isActive }) => `${isActive ? 'text-rose dark:text-gold' : ''}`} to='/tutorials'>Tutorials</NavLink>
           </li>
         </ul>
       </nav>

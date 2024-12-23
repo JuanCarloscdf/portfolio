@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,8 +18,19 @@ svg {
 }
 
 html {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", serif;
     scroll-behavior: smooth;
+}
+
+.noto-color-emoji {
+    font-family: "Noto Color Emoji", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img,
+svg {
+    display: block;
 }
 
 @media (min-width: 480px) {
@@ -35,12 +47,16 @@ h5 {
     color: inherit;
 }
 
-li::marker{
-    margin-right: 10px;
+li:hover::after {
+    transform: translateX(8%);
 }
 
 .active {
     color: #ffac33;
+}
+
+.active-footer {
+    color: tomato;
 }
 
 html.dark .active {
@@ -101,4 +117,5 @@ html:not(.dark) .nav-link:hover::after {
 
 button:active {
     transform: translate(2%);
+
 }

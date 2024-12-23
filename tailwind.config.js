@@ -164,18 +164,33 @@ export default {
           '50%': { transform: 'rotate(0)' },
           '75%': { transform: 'rotate(15deg)' },
           '100%': { transform: 'rotate(0)' },
+        },
+        "short-circuit": {
+          '0%': { color: 'inherit', 'text-shadow': " 2px 2px 4px rgba(0, 0, 0, 0.3)" },
+          '5%': { color: 'transparent' },
+          '10%': { color: 'inherit' },
+          '90%': { color: 'inherit' },
+          '95%': { color: 'transparent' },
+          '100%': { color: 'inherit' },
+        },
+        "top-fade": {
+          '0%': { transform: "translateY(0)" },
+          '100%': { transform: 'translateY(-80%)' },
         }
       },
       animation: {
         fadeIn: 'fadeIn .8s ease-in-out 1',
-        bell: 'bell .8s linear 1'
+        bell: 'bell .8s linear 1',
+        "short-circuit": "short-circuit 2s linear infinite",
+        "top-fade": "top-fade 2s linear infinite"
       },
       rotate: {
         'x-45': 'rotateX(45deg)',
         'y-45': 'rotateY(45deg)',
         'z-30': 'rotateZ(30deg)',
       }
-    },
+
+    }
   },
   plugins: [],
 }
