@@ -1,1 +1,0 @@
-import{j as e}from"./index-DqyEVm9H.js";const t=({text:r})=>e.jsx("h1",{className:" w-full border-b border-solid border-rose dark:border-gold text-xl font-extrabold text-rose dark:text-gold",children:r});export{t as S};
